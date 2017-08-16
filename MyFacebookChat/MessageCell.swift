@@ -9,6 +9,16 @@
 import UIKit
 
 class MessageCell: BaseCell {
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? UIColor(red: 0, green: 134/255, blue: 249/255, alpha: 1): .white
+            nameLabel.textColor = isHighlighted ? .white : .black
+            messageLabel.textColor = isHighlighted ? .white : .black
+            timeLabel.textColor = isHighlighted ? .white : .black
+            
+        }
+    }
+
     var message: Message? {
         didSet {
             nameLabel.text = message?.friend?.name
@@ -21,6 +31,17 @@ class MessageCell: BaseCell {
             if let date = message?.date {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "h:mm a"
+                
+                let elapsedTimeInSeconds = Date().timeIntervalSince(date as Date)
+                let secondsPerDay: TimeInterval = 24 * 60 * 60
+                
+                // Week
+                if elapsedTimeInSeconds > 7 * secondsPerDay {
+                    dateFormatter.dateFormat = "MM/dd/yy"
+                } else if elapsedTimeInSeconds > secondsPerDay {
+                    dateFormatter.dateFormat = "EEE"
+                }
+                
                 timeLabel.text = dateFormatter.string(from: date as Date)
             }
             

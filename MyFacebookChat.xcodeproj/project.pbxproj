@@ -81,18 +81,10 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		716826681F3B9DFE004353C1 /* FakeDataHelper */ = {
-			isa = PBXGroup;
-			children = (
-				7168266A1F3B9E28004353C1 /* FakeDataHelper.swift */,
-			);
-			name = FakeDataHelper;
-			sourceTree = "<group>";
-		};
 		716826691F3B9E14004353C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				716826681F3B9DFE004353C1 /* FakeDataHelper */,
+				7168266A1F3B9E28004353C1 /* FakeDataHelper.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";

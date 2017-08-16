@@ -13,6 +13,7 @@ class CustomTabBarController: UITabBarController {
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
         let friendsController = FriendsViewController(collectionViewLayout: layout)
         let recentMessagesNavController = UINavigationController(rootViewController: friendsController)
         recentMessagesNavController.tabBarItem.title = "Recent"
