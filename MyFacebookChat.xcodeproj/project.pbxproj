@@ -12,8 +12,6 @@
 		711448561F3F9F670017674A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711448551F3F9F670017674A /* CustomTabBarController.swift */; };
 		7168265B1F3B0E84004353C1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7168265A1F3B0E84004353C1 /* CoreData.framework */; };
 		716826611F3B1D2E004353C1 /* MyFacebookChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7168265F1F3B1D2E004353C1 /* MyFacebookChat.xcdatamodeld */; };
-		716826651F3B1E12004353C1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716826641F3B1E12004353C1 /* Message.swift */; };
-		716826671F3B1E6C004353C1 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716826661F3B1E6C004353C1 /* Friend.swift */; };
 		7168266B1F3B9E28004353C1 /* FakeDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168266A1F3B9E28004353C1 /* FakeDataHelper.swift */; };
 		71DD7D521F3889CD00128603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD7D511F3889CD00128603 /* AppDelegate.swift */; };
 		71DD7D541F3889CD00128603 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD7D531F3889CD00128603 /* FriendsViewController.swift */; };
@@ -30,8 +28,6 @@
 		711448551F3F9F670017674A /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		7168265A1F3B0E84004353C1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		716826601F3B1D2E004353C1 /* MyFacebookChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFacebookChat.xcdatamodel; sourceTree = "<group>"; };
-		716826641F3B1E12004353C1 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		716826661F3B1E6C004353C1 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		7168266A1F3B9E28004353C1 /* FakeDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataHelper.swift; sourceTree = "<group>"; };
 		71DD7D4E1F3889CD00128603 /* MyFacebookChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFacebookChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DD7D511F3889CD00128603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,15 +66,6 @@
 				7168265A1F3B0E84004353C1 /* CoreData.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		716826631F3B1DFC004353C1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				716826641F3B1E12004353C1 /* Message.swift */,
-				716826661F3B1E6C004353C1 /* Friend.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		716826691F3B9E14004353C1 /* Utils */ = {
@@ -123,7 +110,6 @@
 		71DD7D631F38900800128603 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				716826631F3B1DFC004353C1 /* Model */,
 				71DD7D651F38903F00128603 /* ViewComponents */,
 				71DD7D641F38903000128603 /* ViewControllers */,
 			);
@@ -265,8 +251,6 @@
 				710D673F1F3E612B0008D792 /* ChatLogMessageCell.swift in Sources */,
 				71DD7D521F3889CD00128603 /* AppDelegate.swift in Sources */,
 				7168266B1F3B9E28004353C1 /* FakeDataHelper.swift in Sources */,
-				716826651F3B1E12004353C1 /* Message.swift in Sources */,
-				716826671F3B1E6C004353C1 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

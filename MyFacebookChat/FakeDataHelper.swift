@@ -80,6 +80,8 @@ class FakeDataHelper: NSObject {
         message.date = NSDate().addingTimeInterval(-minutesAgo * 60)
         message.isSender = sender
         
+        friend.lastMessage = message
+        
         do {
             try context.save()
         } catch let err {

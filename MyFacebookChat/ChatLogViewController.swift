@@ -53,9 +53,9 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
     }()
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        if let newIndexPath = indexPath, type == .insert {
-            blockOperations.append(BlockOperation(block: { 
-                self.collectionView?.insertItems(at: [newIndexPath])
+        if let insertIndex = newIndexPath, type == .insert {
+            blockOperations.append(BlockOperation(block: {
+                self.collectionView?.insertItems(at: [insertIndex])
             }))
         }
     }
@@ -99,6 +99,11 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let indexPath = IndexPath(item: (fetchResultsController.sections?[0].numberOfObjects)! - 1, section: 0)
+        collectionView?.scrollToItem(at: indexPath, at: .top, animated: true)
     }
     
     func handleSimulateInsert() {
